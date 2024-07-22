@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Animation with GSAP</title>
+    <style>
+        .animated-text {
+            display: inline-block;
+            white-space: pre-wrap; /* Ensure spaces are preserved */
+        }
+        .word {
+            display: inline-block;
+            opacity: 0; /* Start with invisible words */
+        }
+    </style>
+</head>
+<body>
+    <div class="page1">
+        <h1 class="animated-text">Hello World! This is GSAP Animation.</h1>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textElement = document.querySelector('.animated-text');
+            const text = textElement.textContent;
+            const words = text.split(' ');
+
+            // Clear the original text
+            textElement.textContent = '';
+
+            // Wrap each word in a span and append to the textElement
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.className = 'word';
+                span.textContent = word + (index < words.length - 1 ? ' ' : ''); // Add space except for the last word
+                textElement.appendChild(span);
+            });
+
+            // Select all word spans
+            const wordElements = document.querySelectorAll('.word');
+
+            // Animate each word with GSAP
+            gsap.fromTo(wordElements, 
+                        { opacity: 0, y: 50 }, // Initial state
+                        { opacity: 1, y: 0, duration: 1, stagger: 0.2 } // Final state and stagger animation
+            );
+        });
+    </script>
+</body>
+</html>

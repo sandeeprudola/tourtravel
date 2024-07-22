@@ -1,0 +1,231 @@
+@font-face {
+    font-family: nb;
+    src: url(./NBInternationalProBoo.ttf);
+}
+@font-face {
+    font-family: rejoy;
+    src: url(./Rejouice-Headline.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(206, 203, 203);
+    position: relative;
+}
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#cursor{
+    height: 7.5vw;
+    width: 7.5vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%,50%);
+    font-family: nb;
+}
+#page1-content{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.128);
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+}
+nav h3{
+    font-family: nb;
+    font-weight: 100;
+    font-size: 1.4vw;
+}
+nav h4{
+    font-family: nb;
+    font-weight: 100;
+    font-size: 1.4vw;
+}
+#page1-content h1{
+    font-family: rejoy;
+    font-size: 11vw;
+    font-weight: 100;
+    line-height: 11vw;
+    padding-bottom: 8%;
+}
+#page1-content h1 span{
+    display: inline-block;
+    font-family: rejoy;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+}
+#page2-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#page2 h3{
+    font-family: nb;
+    font-weight: 100;
+    font-size: 1.4vw;
+    padding: 2.5%;
+}
+h3 span{
+display: inline-block;
+}
+#page2 h4{
+    font-family: nb;
+    font-weight: 100;
+    font-size: 1.4vw;
+    padding: 2.5%;
+}
+hr{
+    color: #000;
+    width: 95%;
+    margin: auto;
+}
+#page2 h1{
+    text-align: center;
+    font-family: nb;
+    font-weight: 200;
+    font-size: 3.2vw;
+    padding: 1.5%;
+}
+
+
+
+
+
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+
+@media(max-width: 600px) {
+    #cursor{
+        display: none;
+    }
+    #page1-content{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.128);
+        position: relative;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+    }
+    nav{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2vw 3vw;
+    }
+    nav h3{
+        font-family: nb;
+        font-weight: 100;
+        font-size: 3.4vw;
+    }
+    nav h4{
+        font-family: nb;
+        font-weight: 100;
+        font-size: 3.4vw;
+    }
+    #page1-content h1{
+        font-family: rejoy;
+        font-size: 13vw;
+        font-weight: 100;
+        line-height: 11vw;
+        padding-bottom: 8%;
+    }
+    #page1-content h1 span{
+        display: inline-block;
+        font-family: rejoy;
+    }
+    #page2{
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+    }
+    #page2-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #page2 h3{
+        font-family: nb;
+        font-weight: 100;
+        font-size: 3vw;
+        padding: 2.5%;
+    }
+    h3 span{
+    display: inline-block;
+    }
+    #page2 h4{
+        font-family: nb;
+        font-weight: 100;
+        font-size: 3vw;
+        padding: 2.5%;
+    }
+    hr{
+        color: #000;
+        width: 95%;
+        margin: auto;
+    }
+    #page2 h1{
+        text-align: center;
+        font-family: nb;
+        font-weight: 200;
+        font-size: 4.2vw;
+        padding: 1.5%;
+    }
+    
+    
+    
+    
+    
+    
+    #page3{
+        height: 100vh;
+        width: 100%;
+        background-color: bisque;
+    }
+}
